@@ -35,14 +35,11 @@ public class ExaminerServiceImplTest {
     }
     @Test
     public void getTooBigListTest() throws BadRequestException {
-        Exception exception = null;
-        Exception exception1 = new BadRequestException();
-        try {
-            examinerService.getQuestions(1);
-        } catch (Exception e) {
-            exception = e;
-        }
 
+        Exception exception1 = new BadRequestException();
+        BadRequestException exception = Assertions.assertThrows(BadRequestException.class, () -> {
+            examinerService.getQuestions(1);
+        });
         Assertions.assertEquals(exception.getMessage(), exception1.getMessage());
     }
 

@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/exam")
 public class JavaQuestionController {
-    final JavaQuestionService javaQuestionService;
+    private final JavaQuestionService javaQuestionService;
 
     public JavaQuestionController(JavaQuestionService javaQuestionService) {
         this.javaQuestionService = javaQuestionService;

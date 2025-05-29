@@ -13,7 +13,7 @@ import java.util.Collection;
 
 @RestController
 public class examController {
-    final JavaQuestionService javaQuestionService;
+    private final JavaQuestionService javaQuestionService;
     ExaminerServiceImpl examinerService;;
 
     public examController(JavaQuestionService javaQuestionService) {
